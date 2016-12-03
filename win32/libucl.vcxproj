@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3808E84D-2C72-4A4C-90B4-CBF7FBE07BCC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libucl</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)ucl-config;$(ProjectDir)..\ucl;$(ProjectDir)..\ucl\include;$(IncludePath)</IncludePath>
+    <IntDir>$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)ucl-config;$(ProjectDir)..\ucl;$(ProjectDir)..\ucl\include;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)ucl-config;$(ProjectDir)..\ucl;$(ProjectDir)..\ucl\include;$(IncludePath)</IncludePath>
+    <IntDir>$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)ucl-config;$(ProjectDir)..\ucl;$(ProjectDir)..\ucl\include;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>UCL_HAVE_CONFIG_H;UCL_USE_ASM;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>UCL_HAVE_CONFIG_H;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>UCL_HAVE_CONFIG_H;UCL_USE_ASM;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>UCL_HAVE_CONFIG_H;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ucl\src\alloc.c" />
+    <ClCompile Include="..\ucl\src\n2b_99.c" />
+    <ClCompile Include="..\ucl\src\n2b_d.c" />
+    <ClCompile Include="..\ucl\src\n2b_ds.c" />
+    <ClCompile Include="..\ucl\src\n2b_to.c" />
+    <ClCompile Include="..\ucl\src\n2d_99.c" />
+    <ClCompile Include="..\ucl\src\n2d_d.c" />
+    <ClCompile Include="..\ucl\src\n2d_ds.c" />
+    <ClCompile Include="..\ucl\src\n2d_to.c" />
+    <ClCompile Include="..\ucl\src\n2e_99.c" />
+    <ClCompile Include="..\ucl\src\n2e_d.c" />
+    <ClCompile Include="..\ucl\src\n2e_ds.c" />
+    <ClCompile Include="..\ucl\src\n2e_to.c" />
+    <ClCompile Include="..\ucl\src\ucl_crc.c" />
+    <ClCompile Include="..\ucl\src\ucl_init.c" />
+    <ClCompile Include="..\ucl\src\ucl_ptr.c" />
+    <ClCompile Include="..\ucl\src\ucl_str.c" />
+    <ClCompile Include="..\ucl\src\ucl_util.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ucl\acc\acc.h" />
+    <ClInclude Include="..\ucl\acc\acc_arch.h" />
+    <ClInclude Include="..\ucl\acc\acc_auto.h" />
+    <ClInclude Include="..\ucl\acc\acc_cc.h" />
+    <ClInclude Include="..\ucl\acc\acc_cxx.h" />
+    <ClInclude Include="..\ucl\acc\acc_defs.h" />
+    <ClInclude Include="..\ucl\acc\acc_incd.h" />
+    <ClInclude Include="..\ucl\acc\acc_ince.h" />
+    <ClInclude Include="..\ucl\acc\acc_inci.h" />
+    <ClInclude Include="..\ucl\acc\acc_init.h" />
+    <ClInclude Include="..\ucl\acc\acc_lib.h" />
+    <ClInclude Include="..\ucl\acc\acc_mm.h" />
+    <ClInclude Include="..\ucl\acc\acc_os.h" />
+    <ClInclude Include="..\ucl\acc\acc_type.h" />
+    <ClInclude Include="..\ucl\include\ucl\ucl.h" />
+    <ClInclude Include="..\ucl\include\ucl\uclconf.h" />
+    <ClInclude Include="..\ucl\include\ucl\ucl_asm.h" />
+    <ClInclude Include="..\ucl\src\getbit.h" />
+    <ClInclude Include="..\ucl\src\ucl_conf.h" />
+    <ClInclude Include="..\ucl\src\ucl_ptr.h" />
+    <ClInclude Include="ucl-config\config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ucl\acc\acclib\bele.ch" />
+    <None Include="..\ucl\acc\acclib\dosalloc.ch" />
+    <None Include="..\ucl\acc\acclib\fnmatch.ch" />
+    <None Include="..\ucl\acc\acclib\getopt.ch" />
+    <None Include="..\ucl\acc\acclib\halloc.ch" />
+    <None Include="..\ucl\acc\acclib\hfread.ch" />
+    <None Include="..\ucl\acc\acclib\hmemcpy.ch" />
+    <None Include="..\ucl\acc\acclib\hread.ch" />
+    <None Include="..\ucl\acc\acclib\hsread.ch" />
+    <None Include="..\ucl\acc\acclib\hstring.ch" />
+    <None Include="..\ucl\acc\acclib\misc.ch" />
+    <None Include="..\ucl\acc\acclib\opendir.ch" />
+    <None Include="..\ucl\acc\acclib\perfctr.ch" />
+    <None Include="..\ucl\acc\acclib\rand.ch" />
+    <None Include="..\ucl\acc\acclib\rdtsc.ch" />
+    <None Include="..\ucl\acc\acclib\uclock.ch" />
+    <None Include="..\ucl\acc\acclib\wildargv.ch" />
+    <None Include="..\ucl\acc\acc_chk.ch" />
+    <None Include="..\ucl\acc\acc_chkr.ch" />
+    <None Include="..\ucl\acc\acc_lib.ch" />
+    <MASM Include="..\ucl\asm\i386\src_masm\all\asm_all.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DeploymentContent>
+      <FileType>Document</FileType>
+      <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</UseSafeExceptionHandlers>
+      <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</UseSafeExceptionHandlers>
+    </MASM>
+    <None Include="..\ucl\src\n2_99.ch" />
+    <None Include="..\ucl\src\ucl_dll.ch" />
+    <None Include="..\ucl\src\ucl_mchw.ch" />
+    <None Include="..\ucl\src\ucl_swd.ch" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

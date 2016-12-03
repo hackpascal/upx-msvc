@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="头文件\include">
+      <UniqueIdentifier>{9921f197-6244-406e-9e78-258c23d2c46a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\include\ucl">
+      <UniqueIdentifier>{3f0aeb23-4b11-4918-9b5f-3740ca94bdaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\acc">
+      <UniqueIdentifier>{a97c4cf8-76c6-4719-959a-ad6fd46ba800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\acc\acclib">
+      <UniqueIdentifier>{1e8092f0-1a12-463d-b2ca-735361689d16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="汇编文件">
+      <UniqueIdentifier>{cbf5cd3c-df34-461a-a804-1156ff9050a7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ucl\src\alloc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\n2b_99.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\n2b_d.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\n2b_ds.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\n2b_to.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\n2d_99.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\n2d_d.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\n2d_ds.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\n2d_to.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\n2e_99.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\n2e_d.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\n2e_ds.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\n2e_to.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\ucl_crc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\ucl_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\ucl_ptr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\ucl_str.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ucl\src\ucl_util.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ucl\src\getbit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\src\ucl_conf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\src\ucl_ptr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\include\ucl\ucl.h">
+      <Filter>头文件\include\ucl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\include\ucl\ucl_asm.h">
+      <Filter>头文件\include\ucl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\include\ucl\uclconf.h">
+      <Filter>头文件\include\ucl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc_arch.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc_auto.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc_cc.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc_cxx.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc_defs.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc_incd.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc_ince.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc_inci.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc_init.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc_lib.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc_mm.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc_os.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ucl\acc\acc_type.h">
+      <Filter>头文件\acc</Filter>
+    </ClInclude>
+    <ClInclude Include="ucl-config\config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ucl\src\n2_99.ch">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\ucl\src\ucl_dll.ch">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\ucl\src\ucl_mchw.ch">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\ucl\src\ucl_swd.ch">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\ucl\acc\acc_chk.ch">
+      <Filter>头文件\acc</Filter>
+    </None>
+    <None Include="..\ucl\acc\acc_chkr.ch">
+      <Filter>头文件\acc</Filter>
+    </None>
+    <None Include="..\ucl\acc\acc_lib.ch">
+      <Filter>头文件\acc</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\bele.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\dosalloc.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\fnmatch.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\getopt.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\halloc.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\hfread.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\hmemcpy.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\hread.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\hsread.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\hstring.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\misc.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\opendir.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\perfctr.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\rand.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\rdtsc.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\uclock.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+    <None Include="..\ucl\acc\acclib\wildargv.ch">
+      <Filter>头文件\acc\acclib</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\ucl\asm\i386\src_masm\all\asm_all.asm">
+      <Filter>汇编文件</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>

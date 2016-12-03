@@ -56,3 +56,11 @@ src/stub/tools/armpe/armpe_tester.out
 src/stub/tools/sstrip/amd64-linux-sstrip
 src/stub/tools/sstrip/i386-linux-sstrip
 src/stub/tools/sstrip/sstrip
+
+win32/.vs
+win32/Debug
+win32/Release
+win32/x64
+win32/*.db
+win32/*.opendb
+

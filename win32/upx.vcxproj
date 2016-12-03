@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ABC6CF2B-EF60-4EBE-9391-32FCAFBBB4A3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>upx</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)..\ucl\include;$(ProjectDir)..\src\lzma-sdk;$(ProjectDir)..\zlib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(LibraryPath)</LibraryPath>
+    <IntDir>$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)..\ucl\include;$(ProjectDir)..\src\lzma-sdk;$(ProjectDir)..\zlib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)..\ucl\include;$(ProjectDir)..\src\lzma-sdk;$(ProjectDir)..\zlib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(LibraryPath)</LibraryPath>
+    <IntDir>$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)..\ucl\include;$(ProjectDir)..\src\lzma-sdk;$(ProjectDir)..\zlib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WITH_LZMA=0x443;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/J %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libucl.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WITH_LZMA=0x443;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/J %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libucl.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WITH_LZMA=0x443;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/J %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libucl.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WITH_LZMA=0x443;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/J %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libucl.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\compress.cpp" />
+    <ClCompile Include="..\src\compress_lzma.cpp" />
+    <ClCompile Include="..\src\compress_ucl.cpp" />
+    <ClCompile Include="..\src\compress_zlib.cpp" />
+    <ClCompile Include="..\src\c_file.cpp" />
+    <ClCompile Include="..\src\c_init.cpp" />
+    <ClCompile Include="..\src\c_none.cpp" />
+    <ClCompile Include="..\src\c_screen.cpp" />
+    <ClCompile Include="..\src\except.cpp" />
+    <ClCompile Include="..\src\file.cpp" />
+    <ClCompile Include="..\src\filter.cpp" />
+    <ClCompile Include="..\src\filteri.cpp" />
+    <ClCompile Include="..\src\help.cpp" />
+    <ClCompile Include="..\src\lefile.cpp" />
+    <ClCompile Include="..\src\linker.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\mem.cpp" />
+    <ClCompile Include="..\src\msg.cpp" />
+    <ClCompile Include="..\src\packer.cpp" />
+    <ClCompile Include="..\src\packer_c.cpp" />
+    <ClCompile Include="..\src\packer_f.cpp" />
+    <ClCompile Include="..\src\packhead.cpp" />
+    <ClCompile Include="..\src\packmast.cpp" />
+    <ClCompile Include="..\src\pefile.cpp" />
+    <ClCompile Include="..\src\p_armpe.cpp" />
+    <ClCompile Include="..\src\p_com.cpp" />
+    <ClCompile Include="..\src\p_djgpp2.cpp" />
+    <ClCompile Include="..\src\p_elks.cpp" />
+    <ClCompile Include="..\src\p_exe.cpp" />
+    <ClCompile Include="..\src\p_lx_elf.cpp" />
+    <ClCompile Include="..\src\p_lx_exc.cpp" />
+    <ClCompile Include="..\src\p_lx_interp.cpp" />
+    <ClCompile Include="..\src\p_lx_sh.cpp" />
+    <ClCompile Include="..\src\p_mach.cpp" />
+    <ClCompile Include="..\src\p_ps1.cpp" />
+    <ClCompile Include="..\src\p_sys.cpp" />
+    <ClCompile Include="..\src\p_tmt.cpp" />
+    <ClCompile Include="..\src\p_tos.cpp" />
+    <ClCompile Include="..\src\p_unix.cpp" />
+    <ClCompile Include="..\src\p_vmlinx.cpp" />
+    <ClCompile Include="..\src\p_vmlinz.cpp" />
+    <ClCompile Include="..\src\p_w16ne.cpp" />
+    <ClCompile Include="..\src\p_w32pe.cpp" />
+    <ClCompile Include="..\src\p_w64pep.cpp" />
+    <ClCompile Include="..\src\p_wcle.cpp" />
+    <ClCompile Include="..\src\snprintf.cpp" />
+    <ClCompile Include="..\src\stdcxx.cpp" />
+    <ClCompile Include="..\src\s_djgpp2.cpp" />
+    <ClCompile Include="..\src\s_object.cpp" />
+    <ClCompile Include="..\src\s_vcsa.cpp" />
+    <ClCompile Include="..\src\s_win32.cpp" />
+    <ClCompile Include="..\src\ui.cpp" />
+    <ClCompile Include="..\src\util.cpp" />
+    <ClCompile Include="..\src\work.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\bele.h" />
+    <ClInclude Include="..\src\bele_policy.h" />
+    <ClInclude Include="..\src\bptr.h" />
+    <ClInclude Include="..\src\compress.h" />
+    <ClInclude Include="..\src\conf.h" />
+    <ClInclude Include="..\src\console.h" />
+    <ClInclude Include="..\src\except.h" />
+    <ClInclude Include="..\src\file.h" />
+    <ClInclude Include="..\src\filter.h" />
+    <ClInclude Include="..\src\lefile.h" />
+    <ClInclude Include="..\src\linker.h" />
+    <ClInclude Include="..\src\mem.h" />
+    <ClInclude Include="..\src\miniacc.h" />
+    <ClInclude Include="..\src\options.h" />
+    <ClInclude Include="..\src\packer.h" />
+    <ClInclude Include="..\src\packmast.h" />
+    <ClInclude Include="..\src\pefile.h" />
+    <ClInclude Include="..\src\p_armpe.h" />
+    <ClInclude Include="..\src\p_com.h" />
+    <ClInclude Include="..\src\p_djgpp2.h" />
+    <ClInclude Include="..\src\p_elf.h" />
+    <ClInclude Include="..\src\p_elf_enum.h" />
+    <ClInclude Include="..\src\p_exe.h" />
+    <ClInclude Include="..\src\p_lx_elf.h" />
+    <ClInclude Include="..\src\p_lx_exc.h" />
+    <ClInclude Include="..\src\p_lx_interp.h" />
+    <ClInclude Include="..\src\p_lx_sh.h" />
+    <ClInclude Include="..\src\p_mach.h" />
+    <ClInclude Include="..\src\p_mach_enum.h" />
+    <ClInclude Include="..\src\p_ps1.h" />
+    <ClInclude Include="..\src\p_sys.h" />
+    <ClInclude Include="..\src\p_tmt.h" />
+    <ClInclude Include="..\src\p_tos.h" />
+    <ClInclude Include="..\src\p_unix.h" />
+    <ClInclude Include="..\src\p_vmlinx.h" />
+    <ClInclude Include="..\src\p_vmlinz.h" />
+    <ClInclude Include="..\src\p_vxd.h" />
+    <ClInclude Include="..\src\p_w16ne.h" />
+    <ClInclude Include="..\src\p_w32pe.h" />
+    <ClInclude Include="..\src\p_w64pep.h" />
+    <ClInclude Include="..\src\p_wcle.h" />
+    <ClInclude Include="..\src\screen.h" />
+    <ClInclude Include="..\src\snprintf.h" />
+    <ClInclude Include="..\src\stdcxx.h" />
+    <ClInclude Include="..\src\ui.h" />
+    <ClInclude Include="..\src\util.h" />
+    <ClInclude Include="..\src\version.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
